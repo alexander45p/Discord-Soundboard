@@ -1,0 +1,56 @@
+TABLETA DE SONIDOS - SALIDA PARA DISCORD
+
+1) REQUISITOS
+
+- Windows 10 u 11.
+- Python 3.10 a 3.12 recomendado (64 bits).
+- VB-Audio Virtual Cable instalado.
+
+2) INSTALAR VB-CABLE
+
+Descarga desde la pagina oficial:
+https://vb-audio.com/Cable/
+
+Instala el controlador siguiendo las instrucciones del fabricante y reinicia
+Windows si el instalador lo solicita. La aplicacion no puede instalar un
+controlador de audio de Windows por su cuenta.
+
+3) INSTALAR LA APLICACION
+
+- Descomprime el ZIP en una carpeta normal (no dentro del ZIP).
+- Ejecuta INSTALAR_DEPENDENCIAS.bat.
+- Cuando termine, ejecuta INICIAR.bat.
+
+4) CONFIGURAR LA APLICACION
+
+- Salida 1 (cable virtual): CABLE Input (VB-Audio Virtual Cable).
+  Si hay varias variantes, preferi la que indica Windows WASAPI.
+- Salida 2 (auriculares): tus auriculares o Speakers Realtek.
+- Microfono real: selecciona tu microfono fisico.
+- Pulsa Mic: ON para que tu voz tambien llegue a Discord.
+
+La aplicacion reproduce cada sonido por las dos salidas seleccionadas:
+Salida 1 para Discord y Salida 2 para que vos lo escuches.
+
+5) CONFIGURAR DISCORD
+
+Ajustes de usuario > Voz y video:
+- Dispositivo de entrada: CABLE Output (VB-Audio Virtual Cable).
+- Dispositivo de salida: tus auriculares habituales.
+- Modo de entrada: Deteccion de voz.
+- Desactiva temporalmente la supresion de ruido y la cancelacion de eco
+  si Discord esta filtrando los efectos. Ajusta luego segun el resultado.
+
+6) PRUEBA
+
+- Reproduce un sonido en la aplicacion.
+- La barra "Hacia Discord (Salida 1)" debe moverse.
+- En Discord, usa la prueba de microfono y verifica que se escuche el audio.
+- Pide a otra persona que confirme que recibe el sonido.
+
+
+SOLUCION TECNICA
+
+El audio de los botones se mezcla por separado en ambas salidas. El microfono
+fisico se mezcla solamente en Salida 1 para que Discord reciba voz + efectos,
+sin duplicar el microfono en los auriculares locales.
